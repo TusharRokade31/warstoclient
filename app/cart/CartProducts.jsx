@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import CartItems from "./cartItems";
+import CartItems from "./CartItems";
 
 const CartProducts = ({ data }) => {
   return (
