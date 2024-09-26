@@ -2,7 +2,7 @@
 import React, { useState, useMemo, useEffect, useCallback } from "react";
 import Filters from "./Filters";
 import { Drawer, Input } from "@material-tailwind/react";
-import SideFilters from "./sidefilters";
+import SideFilters from "./Sidefilters";
 import {
   Button,
   
