@@ -4,12 +4,9 @@ import axios from "axios";
 
 export const getOrders = createAsyncThunk(
   "get order",
-  async (token, { dispatch }) => {
+  async (arg, { dispatch }) => {
     try {
-      const response = await api.get("/orders/history", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      localStorage.setItem("token", token);
+      const response = await api.get("/orders/history");
       return response.data;
     } catch (error) {
       console.error("Error setting user:", error);

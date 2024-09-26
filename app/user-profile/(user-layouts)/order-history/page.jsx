@@ -6,12 +6,10 @@ import { getOrders } from "@/store/orderSlice";
 
 const OrderHistory = () => {
   const location = usePathname()
-
-  const token = localStorage.getItem("token");
   const dispatch = useDispatch();
   const orders = useSelector((state) => state.orderr);
   useEffect(() => {
-    dispatch(getOrders(token));
+    dispatch(getOrders());
   }, [dispatch]);
 
   console.log(orders);
