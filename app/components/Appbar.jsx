@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { IoMdHeartEmpty } from "react-icons/io";
-import logo from '../../src/images/logo.png'
-import Warsto from '../../src/images/warsto.png'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import logo from "../../src/images/logo.png";
+import Warsto from "../../src/images/warsto.png";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import { IoMdHeart } from "react-icons/io";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import PermIdentityIcon from '@mui/icons-material/PermIdentity';
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { CiUser } from "react-icons/ci";
 import { RxCross2 } from "react-icons/rx";
 
@@ -60,7 +60,7 @@ const Appbar = () => {
   // const [showNavbar, setShowNavbar] = useState(true);
   // const [lastScrollY, setLastScrollY] = useState(0);
 
-  const {showNavbar,setvalue,Reqvalue} = useAuth()
+  const { showNavbar, setvalue, Reqvalue } = useAuth();
   const [currentUser, setCurrentUser] = useState(null);
 
   // const scrollThreshold = 30;
@@ -92,7 +92,7 @@ const Appbar = () => {
     } else if (location == "/collection/products") {
       closeCartDrawer();
     }
-  }, [location,closeCartDrawer]);
+  }, [location, closeCartDrawer]);
 
   const data = useSelector((state) => state.cartss?.cartitems?.items);
   const collectionMenu = useSelector((state) => state.categoriess?.Collections);
@@ -138,16 +138,17 @@ const Appbar = () => {
           showNavbar ? "transform translate-y-0" : "transform -translate-y-full"
         }`}
       >
-        <div className={`${Reqvalue} lg:text-sm text-xs items-center justify-center bg-black text-white py-3`}>
+        <div
+          className={`${Reqvalue} lg:text-sm text-xs items-center justify-center bg-black text-white py-3`}
+        >
           Request Your Free Appointment With Our Design Experts
-          <RxCross2 className="ms-10" onClick={()=>setvalue('hidden')} />
+          <RxCross2 className="ms-10" onClick={() => setvalue("hidden")} />
         </div>
         <div className="flex flex-row justify-around lg:justify-center items-center">
           <Link href={"/"}>
             <div className="p-4 text-lg lg:w-40 w-32 lg:me-5 sm:me-0">
-            <Image src={Warsto} alt="warSto" />
+              <Image src={Warsto} alt="warSto" />
             </div>
-            
           </Link>
           <SearchBar />
           <div className="hidden lg:flex justify-center">
@@ -178,7 +179,13 @@ const Appbar = () => {
                   </Link>
                 </MenuHandler>
                 <MenuList className="mb-5">
-                  
+                  <Link
+                    href={`/testui`}
+                  >
+                    <MenuItem className="hover:border-none">
+                      Test Ui
+                    </MenuItem>
+                  </Link>
                   {collectionMenu?.map((collection) => {
                     return (
                       <Link
@@ -212,9 +219,12 @@ const Appbar = () => {
             >
               <Link href={"/wishlist"}>
                 {Wishlistdata?.length == 0 ? (
-                  <FavoriteBorderIcon  className="text-2xl  xxs:me-2" />
+                  <FavoriteBorderIcon className="text-2xl  xxs:me-2" />
                 ) : (
-                  <FavoriteIcon sx={{ color: '#ef4666' }}  className="text-2xl  xxs:me-2" />
+                  <FavoriteIcon
+                    sx={{ color: "#ef4666" }}
+                    className="text-2xl  xxs:me-2"
+                  />
                 )}
               </Link>
             </Tooltip>
@@ -222,7 +232,10 @@ const Appbar = () => {
             <Menu allowHover={true}>
               <MenuHandler>
                 <div>
-                  <AccountCircleIcon sx={{color:"#ef4665"}}  className="text-2xl mx-0 lg:mx-2" />
+                  <AccountCircleIcon
+                    sx={{ color: "#ef4665" }}
+                    className="text-2xl mx-0 lg:mx-2"
+                  />
                 </div>
                 {/* <Avatar
                   variant="circular"
