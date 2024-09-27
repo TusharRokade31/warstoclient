@@ -10,11 +10,13 @@ const AuthSuccess = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const token = searchParams.get("token");
-    if (token) {
-      localStorage.setItem("token", token);
-      dispatch(setUser(token));
-      setTimeout(() => router.push("/"), 100);
+    if (typeof window !== "undefined") { // Ensure this runs on the client
+      const token = searchParams.get("token");
+      if (token) {
+        localStorage.setItem("token", token);
+        dispatch(setUser(token));
+        setTimeout(() => router.push("/"), 100);
+      }
     }
   }, [router, dispatch]);
 
