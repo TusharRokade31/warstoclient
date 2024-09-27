@@ -25,7 +25,7 @@ import {
 } from "@material-tailwind/react";
 import { useAuth } from "@/context/AuthContext";
 
-const page = () => {
+const TestUi = () => {
   const arr = [
     "sort",
     "size",
@@ -149,4 +149,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default TestUi;
