@@ -80,7 +80,7 @@ const HeroSlider = () => {
           layers={[
             {
               image:
-                "https://www.trio.ru/upload/resize_cache/iblock/8ba/1000_1000_1/8ba103936f57e57e8410395ae011e0bb.jpg",
+                "https://vladmebstroy.ru/sites/default/files/products/raspashnoy-shkaf-3.jpg",
               speed: -20,
             },
           ]}
