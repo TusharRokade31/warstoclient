@@ -13,7 +13,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 
 import { useRouter } from "next/navigation";
 
-export default function layout({ children }) {
+export default function Layout({ children }) {
   const Navigate = useRouter();
   const [Open, SetOpen] = useState(false);
   const openDrawer = () => SetOpen(true);

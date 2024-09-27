@@ -1,6 +1,7 @@
 // import { useEffect } from "react";
 
 import { loadUser } from "@/store/authSlice";
+import { Provider } from 'react-redux';
 import api from "../utils/api";
 // import "../styles/globals.css";
 import { useEffect } from "react";
