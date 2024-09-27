@@ -14,10 +14,10 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { useRouter } from "next/navigation";
 
 export default function layout({ children }) {
-  const navigate = useRouter();
-  const [open, setOpen] = useState(false);
-  const openDrawer = () => setOpen(true);
-  const closeDrawer = () => setOpen(false);
+  const Navigate = useRouter();
+  const [Open, SetOpen] = useState(false);
+  const openDrawer = () => SetOpen(true);
+  const closeDrawer = () => SetOpen(false);
 
   const data = [
     {
@@ -49,8 +49,8 @@ export default function layout({ children }) {
 
   const handleTabClick = (mainpath) => {
     const navigatePath = mainpath;
-    navigate.push(navigatePath);
-    setOpen(false)
+    Navigate.push(navigatePath);
+    SetOpen(false)
   };
 
   return (
@@ -70,7 +70,7 @@ export default function layout({ children }) {
           {children}
         </div>
       </div>
-      <Drawer  open={open} overlay={false} onClose={closeDrawer}>
+      <Drawer  open={Open} overlay={false} onClose={closeDrawer}>
         <div className="mb-2 flex items-center justify-between p-4">
           <Typography variant="h5" color="blue-gray">
             LOGO

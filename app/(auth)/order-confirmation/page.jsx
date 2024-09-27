@@ -162,7 +162,7 @@ const OrderConfirmation = () => {
       <div className="container mx-auto px-4 py-16 max-w-4xl text-center">
         <h1 className="text-3xl font-bold mb-6">Order Not Found</h1>
         <p className="text-lg mb-8">
-          We couldn't find the order you're looking for. Please check your order
+          We couldn&apos;t find the order you&apos;re looking for. Please check your order
           ID and try again.
         </p>
         <Button onClick={() => router.push("/")} size="lg">

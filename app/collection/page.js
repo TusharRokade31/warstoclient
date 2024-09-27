@@ -4,19 +4,21 @@ import Link from "next/link";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { getCategories } from "@/store/categoriesSlice";
 
-const BannerSection = React.memo(() => (
-  <div className="relative mb-8">
-    <img
-      src="https://static.vecteezy.com/system/resources/thumbnails/028/207/246/small_2x/hotel-lobby-with-scandinavian-style-furniture-profesionalgrapy-ai-generated-photo.jpg"
-      alt="Banner"
-      className="w-full h-48 object-cover"
-      loading="lazy"
-    />
-    <div className="absolute inset-0 flex items-center justify-center text-white text-center bg-black bg-opacity-30">
-      <h1 className="text-3xl md:text-4xl font-bold">Featured Collections</h1>
+const BannerSection = React.memo(() => {
+  return (
+    <div className="relative mb-8">
+      <img
+        src="https://static.vecteezy.com/system/resources/thumbnails/028/207/246/small_2x/hotel-lobby-with-scandinavian-style-furniture-profesionalgrapy-ai-generated-photo.jpg"
+        alt="Banner"
+        className="w-full h-48 object-cover"
+        loading="lazy"
+      />
+      <div className="absolute inset-0 flex items-center justify-center text-white text-center bg-black bg-opacity-30">
+        <h1 className="text-3xl md:text-4xl font-bold">Featured Collections</h1>
+      </div>
     </div>
-  </div>
-));
+  );
+});
 
 const Collections = React.memo(() => {
   const dispatch = useDispatch();

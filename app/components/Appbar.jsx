@@ -92,7 +92,7 @@ const Appbar = () => {
     } else if (location == "/collection/products") {
       closeCartDrawer();
     }
-  }, [location]);
+  }, [location,closeCartDrawer]);
 
   const data = useSelector((state) => state.cartss?.cartitems?.items);
   const collectionMenu = useSelector((state) => state.categoriess?.Collections);

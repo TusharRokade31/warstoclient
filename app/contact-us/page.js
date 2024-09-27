@@ -38,8 +38,8 @@ const ContactUs = () => {
           <div className="text-center max-w-5xl">
             <h3 className="mb-4 text-3xl font-medium">We Are Here To Help</h3>
             <p className="text-lg w-full lg:w-[700px]  px-4">
-              You have questions, we have answers.Don't see your Q&A below? Just{" "}
-              <span className="font-bold	">Contact us</span> and we'll get you an
+              You have questions, we have answers.Don&apos;t see your Q&A below? Just{" "}
+              <span className="font-bold	">Contact us</span> and we&apos;ll get you an
               answer ASAP.
             </p>
           </div>
